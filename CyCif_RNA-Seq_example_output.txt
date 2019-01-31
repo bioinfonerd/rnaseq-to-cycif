@@ -1,0 +1,162 @@
+bionerd@MTS-LSP-L06275:~/Dana_Farber/IRC/CyCif$ python CyCif-RNA-Seq.py
+Loading Libraries
+Loading Data
+
+Analyzing QC Data
+Found in column GeneID 474
+Found in column Uniprot 0
+Found in column Synonyms 2
+Found in column Target 41
+Found in column PTM 0
+Found in column Fluor 2
+Found in column Species 0
+Found in column Clone 2
+Found in column Isotype 0
+Found in column Reactivity 0
+Found in column Vendor 0
+Found in column Cat No 0
+Found in column Channel 0
+Found in column Expected 0
+Found in column Hs_confidence 0
+Found in column Hs_signoff 0
+Found in column Mm_confidence 0
+Found in column Mm_signoff 0
+Found in column JRL_bio 0
+Found in column SM_notes 0
+Found in column SS_list 0
+Found in column dil 0
+Found in column expt_TON 0
+Found in column sample_TON 0
+Found in column cyc_TON 0
+Found in column ch_TON 0
+Found in column dil_TON 0
+Found in column eval_TON 0
+Found in column TMA_expt 0
+Found in column TMA_sample 2
+Found in column TMA_cyc 0
+Found in column TMA_ch 0
+Found in column Unnamed: 32 1
+Found in column eval_TMA 0
+Found in column other 0
+Found in column sample 0
+Found in column ch 0
+Found in column cycle 0
+Found in column note 0
+Total CyCif Antibodies found: 524(0.85%) out of 615
+[TODO] Add method to find missing CyCif Gene IDs
+
+Selecting for RNA-Seq Data with CyCif Antibodies
+
+RNA-Seq Results for analysis: D1_D8
+DEG Results: 144
+TEG Results: 152
+Number of matching CyCif Antibodies: 14(0.1%)
+
+RNA-Seq Results for analysis: D1_D8_nonresponders
+DEG Results: 32
+TEG Results: 34
+Number of matching CyCif Antibodies: 2(0.06%)
+
+RNA-Seq Results for analysis: D1_D8_responders
+DEG Results: 85
+TEG Results: 98
+Number of matching CyCif Antibodies: 11(0.13%)
+
+RNA-Seq Results for analysis: D1_ER
+DEG Results: 80
+TEG Results: 98
+Number of matching CyCif Antibodies: 5(0.06%)
+
+RNA-Seq Results for analysis: D1_treatment
+DEG Results: 12
+TEG Results: 12
+Number of matching CyCif Antibodies: 0(0.0%)
+
+RNA-Seq Results for analysis: D8_treatment
+DEG Results: 192
+TEG Results: 203
+Number of matching CyCif Antibodies: 19(0.1%)
+
+RNA-Seq Results for analysis: ER
+DEG Results: 198
+TEG Results: 260
+Number of matching CyCif Antibodies: 12(0.06%)
+
+RNA-Seq Results for analysis: RCB01vs2_3
+DEG Results: 431
+TEG Results: 459
+Number of matching CyCif Antibodies: 34(0.08%)
+
+RNA-Seq Results for analysis: RCB0vs1_D1_response
+DEG Results: 17
+TEG Results: 17
+Number of matching CyCif Antibodies: 2(0.12%)
+
+RNA-Seq Results for analysis: RCB0vs1_D8_response
+DEG Results: 58
+TEG Results: 61
+Number of matching CyCif Antibodies: 8(0.14%)
+
+RNA-Seq Results for analysis: RCB0vs1_response
+DEG Results: 77
+TEG Results: 78
+Number of matching CyCif Antibodies: 0(0.0%)
+
+RNA-Seq Results for analysis: RCB0vs2_3
+DEG Results: 486
+TEG Results: 519
+Number of matching CyCif Antibodies: 48(0.1%)
+
+RNA-Seq Results for analysis: RCB0vs2_3_D1_response
+DEG Results: 418
+TEG Results: 434
+Number of matching CyCif Antibodies: 24(0.06%)
+
+RNA-Seq Results for analysis: RCB0vs2_3_D8_response
+DEG Results: 113
+TEG Results: 120
+Number of matching CyCif Antibodies: 17(0.15%)
+
+RNA-Seq Results for analysis: RCB0vs3
+DEG Results: 643
+TEG Results: 678
+Number of matching CyCif Antibodies: 42(0.07%)
+
+RNA-Seq Results for analysis: RCB0vs3_D1_response
+DEG Results: 545
+TEG Results: 580
+Number of matching CyCif Antibodies: 21(0.04%)
+
+RNA-Seq Results for analysis: RCB0vs3_D8_response
+DEG Results: 39
+TEG Results: 39
+Number of matching CyCif Antibodies: 3(0.08%)
+
+RNA-Seq Results for analysis: RCB0_D1vsD8
+DEG Results: 85
+TEG Results: 98
+Number of matching CyCif Antibodies: 11(0.13%)
+
+RNA-Seq Results for analysis: RCB1_D1vsD8
+DEG Results: 38
+TEG Results: 38
+Number of matching CyCif Antibodies: 0(0.0%)
+
+RNA-Seq Results for analysis: RCB2_3_D1vsD8
+DEG Results: 25
+TEG Results: 25
+Number of matching CyCif Antibodies: 0(0.0%)
+
+RNA-Seq Results for analysis: RCB3_D1vsD8
+DEG Results: 19
+TEG Results: 19
+Number of matching CyCif Antibodies: 1(0.05%)
+
+Merging CyCif Antibodies From RNA-Seq Results
+Total RNA-Seq Analysis Merging: 22
+All RNA-Seq Results with Antibodies: 407
+Combined CyCif RNA-Seq Results: 133
+
+[TODO] Graphical Output For Results
+[TODO] Smart Way to Guess if RNA correlates with Protein
+[TODO] Make CyCif Panel
