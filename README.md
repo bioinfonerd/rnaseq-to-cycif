@@ -13,7 +13,7 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
  
 ### Output: 
  1) Table summarizing for each RNA-Seq analysis which antibodies found and what analysis found 
-      - (saved in: rna_cycif_results)
+      - Saved in directory: rna_cycif_results
  2) Summary File (CyCif_RNA_Seq_summary.tsv):
       - For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated
 
