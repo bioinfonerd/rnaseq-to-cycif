@@ -84,7 +84,7 @@ To run: python CyCif-RNA-Seq_0.0.1.py
       Found in column note 0
       Total CyCif Antibodies found: 524(0.85%) out of 615
 
-##Part 2: RNA-Seq Differentially Expressed Genes & Transcripts with CyCif Selection
+## Part 2: RNA-Seq Differentially Expressed Genes & Transcripts with CyCif Selection
 
   - For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
   - Prints statistics on search
@@ -97,7 +97,7 @@ To run: python CyCif-RNA-Seq_0.0.1.py
           Differentially Expressed Transcript Results: 98 
           Number of matching CyCif Antibodies: 11(0.13%)
 
-##PART 3: Merge Individual RNA-Seq Seq & CyCif Results
+## PART 3: Merge Individual RNA-Seq Seq & CyCif Results
 
   - Take all results from Part 2 and merge
   - Saves file that show gene id, gene short name, cycif antibody, RNA-Seq Supporting Analysis, Number of RNA-Seq analysis
