@@ -19,8 +19,8 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
 - Additional Information To Find missing Gene IDs for CyCif Proteins 
 - Merge all RNA-Seq results into 1 CyCif Panel (user limit on number of rounds)
 - Smart CyCif Panel: 
-- Add whether antibodies are better in earlier or later rounds
-- Fluoresce Conflicts
+ - Add whether antibodies are better in earlier or later rounds
+ - Fluoresce Conflicts
 - Graphical Output For Results
 - Smart Way to Determine which RNA correlates with Protein
 - Transcript specificity for CyCif Antibodies
