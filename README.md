@@ -1,6 +1,7 @@
-# RNA_Seq-to-CyCif
+# CIR:CyCif Antibody Integration With RNA-Seq
 
-# RNA_Seq-to-CyCif
+
+
 #Purpose: Identify CyCif Antibodies that work from the differentially expressed RNA-Seq results
 #Version: 0.0.1
 #Input (currently hard coded):
