@@ -28,7 +28,7 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
 ## Programming Rationale
  ### PART 1: QC
     -  QC checks ie search all CyCif Antibodes with Ensembl names to check if possible 
-    -  Method is independent of how Zoltan organizes Antibody Table
+    -  Method is independent of how Antibody Table is organized and updated
     -  Matches Gene Name to provide a match for each CyCif Antibody Catalog Number
     -  Prints out statistics on how many matches, where found, and what % of CyCif Antibodies were Found
     
