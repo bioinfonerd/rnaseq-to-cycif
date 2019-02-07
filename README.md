@@ -10,8 +10,9 @@ Current Input Organization:
  3) RNA-Seq Differentially Expressed Results (directory: rna_seq_results)
  
  Output: 
-    - Table summarizing antibodies found and what analysis found
-    - For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated
+    1) Table summarizing for each RNA-Seq analysis which antibodies found and what analysis found (saved in: rna_cycif_results)
+    2) Summary File:
+      - For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated
 
 Possible Improvements:
 - Additional Information To Find missing Gene IDs for CyCif Proteins 
