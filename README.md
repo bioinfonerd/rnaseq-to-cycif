@@ -7,7 +7,7 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
 
 ### Current Input Organization:
  1) Ensembl Gene/Transcript Mapping
- 2) Zoltan's list of CyCif Antibodies
+ 2) List of Validated CyCif Antibodies
  3) RNA-Seq Differentially Expressed Results (directory: rna_seq_results)
  
 ### Output: 
