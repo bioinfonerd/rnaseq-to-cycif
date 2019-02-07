@@ -19,9 +19,9 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
 ### Possible Improvements:
 - Add method to find missing Gene IDs for CyCif Proteins 
 - Add user defined parameters on what differentially expressed selection criteria
-      - p-value, adjusted p-value cutoffs
-      - fold change consideration
-      - expression theshhold (Gene/Transcript may be significant but below CyCif detection limit) 
+- p-value, adjusted p-value cutoffs
+- fold change consideration
+- expression theshhold (Gene/Transcript may be significant but below CyCif detection limit) 
 - Merge all RNA-Seq results into 1 CyCif Panel (user limit on number of rounds)
 - Smart CyCif Panel: 
    - Add whether antibodies are better in earlier or later rounds
