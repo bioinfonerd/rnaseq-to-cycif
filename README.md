@@ -1,11 +1,12 @@
-CyCif Antibody Selection Based on RNA-Seq
+#CyCif Antibody Selection Based on RNA-Seq
+
 Purpose: Identify CyCif Validated Antibodies that match differentially expressed RNA-Seq results
 
 Version: 0.0.1 (Current)
 
 To run: python CyCif-RNA-Seq_0.0.1.py
 
-Current Input Organization:
+#Current Input Organization:
 Ensembl Gene/Transcript Mapping ('gt_mapping.feather')
 List of Validated CyCif Antibodies ('Validated_CyCif_Antibodies_2019.01.24-NJ.csv')
 RNA-Seq Differentially Expressed Results
@@ -30,7 +31,8 @@ Smart Way to Determine which RNA correlates with Protein
 Transcript specificity for CyCif Antibodies
 add python environment to improve user use
 Programming Rationale
-PART 1: Quality Control
+
+##PART 1: Quality Control
 -  QC checks ie search all CyCif Antibodes with Ensembl names to check if possible 
 -  Method is independent of how Antibody Table is organized and updated
 -  Matches Gene Name to provide a match for each CyCif Antibody Catalog Number
@@ -79,7 +81,8 @@ Found in column ch 0
 Found in column cycle 0
 Found in column note 0
 Total CyCif Antibodies found: 524(0.85%) out of 615
-Part 2: RNA-Seq Differentially Expressed Genes & Transcripts with CyCif Selection
+
+##Part 2: RNA-Seq Differentially Expressed Genes & Transcripts with CyCif Selection
 - For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
 - Prints statistics on search
 
@@ -96,6 +99,7 @@ Part 2: RNA-Seq Differentially Expressed Genes & Transcripts with CyCif Selectio
     Total RNA-Seq Analysis Merging: 21
     All DEG RNA-Seq Results with CyCif Antibodies: 274
     Combined CyCif RNA-Seq Results: 133
-PART 3: Merge Individual RNA-Seq Seq & CyCif Results
+
+##PART 3: Merge Individual RNA-Seq Seq & CyCif Results
 - Take all results from Part 2 and merge
 - Saves file that show gene id, gene short name, cycif antibody, RNA-Seq Supporting Analysis, Number of RNA-Seq analysis 
