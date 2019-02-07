@@ -31,7 +31,7 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
 - Transcript specificity for CyCif Antibodies
 
 ## Programming Rationale
- ### PART 1: QC
+ ### PART 1: Quality Control
     -  QC checks ie search all CyCif Antibodes with Ensembl names to check if possible 
     -  Method is independent of how Antibody Table is organized and updated
     -  Matches Gene Name to provide a match for each CyCif Antibody Catalog Number
@@ -81,7 +81,7 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
     Found in column note 0
     Total CyCif Antibodies found: 524(0.85%) out of 615
     
- ### Part 2: RNA-Seq DEG & CyCif Selection
+ ### Part 2: RNA-Seq Differentially Expressed Genes & Transcripts with CyCif Selection
     - For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
     - Prints statistics on search
     
@@ -99,7 +99,7 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
         All DEG RNA-Seq Results with CyCif Antibodies: 274
         Combined CyCif RNA-Seq Results: 133
         
- ### PART 3: Merge CyCif Panel
+ ### PART 3: Merge Individual RNA-Seq Seq & CyCif Results
     - Take all results from Part 2 and merge
     - Saves file that show gene id, gene short name, cycif antibody, RNA-Seq Supporting Analysis, Number of RNA-Seq analysis supporting observation
  
