@@ -22,10 +22,10 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
    - p-value, adjusted p-value cutoffs
    - fold change consideration
    - expression theshhold (Gene/Transcript may be significant but below CyCif detection limit) 
-- Merge all RNA-Seq results into 1 CyCif Panel (user limit on number of rounds)
 - Smart CyCif Panel: 
    - Add whether antibodies are better in earlier or later rounds
    - Fluoresce Conflicts
+   - Merge all RNA-Seq results into X CyCif Panel (user limit on number of rounds per panel)
 - Graphical Output For Results
 - Smart Way to Determine which RNA correlates with Protein
 - Transcript specificity for CyCif Antibodies
