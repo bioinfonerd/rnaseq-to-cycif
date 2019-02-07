@@ -14,14 +14,14 @@ Current Input Organization:
     - For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated
 
 Possible Improvements:
-    - Additional Information To Find missing Gene IDs for CyCif Proteins 
-    - Merge all RNA-Seq results into 1 CyCif Panel (user limit on number of rounds)
-    - Smart CyCif Panel: 
-            Add whether antibodies are better in earlier or later rounds
-            Fluoresce Conflicts
-    - Graphical Output For Results
-    - Smart Way to Determine which RNA correlates with Protein
-    - Transcript specificity for CyCif Antibodies
+- Additional Information To Find missing Gene IDs for CyCif Proteins 
+- Merge all RNA-Seq results into 1 CyCif Panel (user limit on number of rounds)
+- Smart CyCif Panel: 
+- Add whether antibodies are better in earlier or later rounds
+- Fluoresce Conflicts
+- Graphical Output For Results
+- Smart Way to Determine which RNA correlates with Protein
+- Transcript specificity for CyCif Antibodies
 
 ## Programming Rationale
  ### PART 1: QC
@@ -29,7 +29,6 @@ Possible Improvements:
     -  Method is independent of how Zoltan organizes Antibody Table
     -  Matches Gene Name to provide a match for each CyCif Antibody Catalog Number
     -  Prints out statistics on how many matches, where found, and what % of CyCif Antibodies were Found
-    -  [TODO] for gene names not found from CyCif, perform web search for alternative names
     
  ### Part 2: RNA-Seq DEG & CyCif Selection
     - For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
