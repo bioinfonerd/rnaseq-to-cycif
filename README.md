@@ -12,7 +12,26 @@ To run: python CyCif-RNA-Seq_0.0.1.py
 3) RNA-Seq Differentially Expressed Results A directory with one or more RNA-Seq Differentially Expressed Results (see rna_seq_results/) 
 
 # Output: 
-1) Table summarizing for each RNA-Seq analysis which antibodies found and what analysis found Saved in directory: rna_cycif_results Summary File (CyCif_RNA_Seq_summary.tsv): For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated Possible Improvements: Add method to find missing Gene IDs for CyCif Proteins Add user defined parameters on what differentially expressed selection criteria p-value, adjusted p-value cutoffs fold change consideration expression theshhold (Gene/Transcript may be significant but below CyCif detection limit) Smart CyCif Panel: Add whether antibodies are better in earlier or later rounds Fluoresce Conflicts Merge all RNA-Seq results into X CyCif Panel (user limit on number of rounds per panel) Graphical Output For Results Smart Way to Determine which RNA correlates with Protein Transcript specificity for CyCif Antibodies add python environment to improve user use Programming Rationale
+1) Table summarizing for each RNA-Seq analysis which antibodies found and what analysis found 
+  - For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated
+  - Saved in directory: rna_cycif_results 
+2) Summary File (CyCif_RNA_Seq_summary.tsv): 
+
+# Possible Improvements
+
+- Add method to find missing Gene IDs for CyCif Proteins
+- Add user defined parameters on what differentially expressed selection criteria 
+  - p-value, adjusted p-value cutoffs 
+  - fold change 
+  - consideration expression theshhold (Gene/Transcript may be significant but below CyCif detection limit) 
+- Smart CyCif Panel:
+  - Add whether antibodies are better in earlier or later rounds 
+  - Fluoresce Conflicts 
+  - Merge all RNA-Seq results into X CyCif Panel (user limit on number of rounds per panel) 
+- Graphical Output For Results 
+- Smart Way to Determine which RNA correlates with Protein 
+- Transcript specificity for CyCif Antibodies 
+- add python environment to improve user use Programming Rationale
 
 ## PART 1: Quality Control
 
