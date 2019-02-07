@@ -4,17 +4,18 @@ Version: 0.0.1
 
 To run:  python CyCif-RNA-Seq_0.0.1.py
 
-Current Input Organization:
+### Current Input Organization:
  1) Ensembl Gene/Transcript Mapping
  2) Zoltan's list of CyCif Antibodies
  3) RNA-Seq Differentially Expressed Results (directory: rna_seq_results)
  
- Output: 
- 1) Table summarizing for each RNA-Seq analysis which antibodies found and what analysis found (saved in: rna_cycif_results)
+### Output: 
+ 1) Table summarizing for each RNA-Seq analysis which antibodies found and what analysis found 
+      - (saved in: rna_cycif_results)
  2) Summary File (CyCif_RNA_Seq_summary.tsv):
       - For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated
 
-Possible Improvements:
+### Possible Improvements:
 - Additional Information To Find missing Gene IDs for CyCif Proteins 
 - Merge all RNA-Seq results into 1 CyCif Panel (user limit on number of rounds)
 - Smart CyCif Panel: 
