@@ -35,46 +35,46 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
     Example:
     
     Analyzing QC Data
-Found in column GeneID 474
-Found in column Uniprot 0
-Found in column Synonyms 2
-Found in column Target 41
-Found in column PTM 0
-Found in column Fluor 2
-Found in column Species 0
-Found in column Clone 2
-Found in column Isotype 0
-Found in column Reactivity 0
-Found in column Vendor 0
-Found in column Cat No 0
-Found in column Channel 0
-Found in column Expected 0
-Found in column Hs_confidence 0
-Found in column Hs_signoff 0
-Found in column Mm_confidence 0
-Found in column Mm_signoff 0
-Found in column JRL_bio 0
-Found in column SM_notes 0
-Found in column SS_list 0
-Found in column dil 0
-Found in column expt_TON 0
-Found in column sample_TON 0
-Found in column cyc_TON 0
-Found in column ch_TON 0
-Found in column dil_TON 0
-Found in column eval_TON 0
-Found in column TMA_expt 0
-Found in column TMA_sample 2
-Found in column TMA_cyc 0
-Found in column TMA_ch 0
-Found in column Unnamed: 32 1
-Found in column eval_TMA 0
-Found in column other 0
-Found in column sample 0
-Found in column ch 0
-Found in column cycle 0
-Found in column note 0
-Total CyCif Antibodies found: 524(0.85%) out of 615
+    Found in column GeneID 474
+    Found in column Uniprot 0
+    Found in column Synonyms 2
+    Found in column Target 41
+    Found in column PTM 0
+    Found in column Fluor 2
+    Found in column Species 0
+    Found in column Clone 2
+    Found in column Isotype 0
+    Found in column Reactivity 0
+    Found in column Vendor 0
+    Found in column Cat No 0
+    Found in column Channel 0
+    Found in column Expected 0
+    Found in column Hs_confidence 0
+    Found in column Hs_signoff 0
+    Found in column Mm_confidence 0
+    Found in column Mm_signoff 0
+    Found in column JRL_bio 0
+    Found in column SM_notes 0
+    Found in column SS_list 0
+    Found in column dil 0
+    Found in column expt_TON 0
+    Found in column sample_TON 0
+    Found in column cyc_TON 0
+    Found in column ch_TON 0
+    Found in column dil_TON 0
+    Found in column eval_TON 0
+    Found in column TMA_expt 0
+    Found in column TMA_sample 2
+    Found in column TMA_cyc 0
+    Found in column TMA_ch 0
+    Found in column Unnamed: 32 1
+    Found in column eval_TMA 0
+    Found in column other 0
+    Found in column sample 0
+    Found in column ch 0
+    Found in column cycle 0
+    Found in column note 0
+    Total CyCif Antibodies found: 524(0.85%) out of 615
     
  ### Part 2: RNA-Seq DEG & CyCif Selection
     - For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
