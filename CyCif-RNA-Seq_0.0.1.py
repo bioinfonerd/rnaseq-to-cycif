@@ -46,21 +46,21 @@ import urllib
 
 #load in data
 print('Loading Data')
-location='/home/bionerd/Dana_Farber/IRC/CyCif'
+location='/home/bionerd/Dana_Farber/IRC/CyCif/git/RNA_Seq-to-CyCif'
 os.chdir(location)
+
+rna_seq_cycif_output_loc='./rna_cycif_results/'
 
 #user input [TODO: add user input]
 antibodies=pd.read_table("Validated_CyCif_Antibodies_2019.01.24-NJ.csv", sep=',',header='infer') #Zoltan CyCif Antbiodies
 #RNA_Seq_Results = glob.glob("/home/bionerd/Dana_Farber/IRC/Analysis/BAM_Starting_Point_Analysis/*p001_sig_statistics.tsv")#read in all RNA-Seq DEG files
-RNA_Seq_Results = glob.glob("/home/bionerd/Dana_Farber/IRC/Analysis/*all_Sleuth_results.tsv")#read in all RNA-Seq DEG files
+RNA_Seq_Results = glob.glob("./rna_seq_results/*.tsv")#read in all RNA-Seq DEG files
 gene_mapping = feather.read_dataframe('gt_mapping.feather') #gene & transcript mapping reference file (feather format)
 #filter down to just ensembl gene name and gene id
 gene_mapping = gene_mapping.loc[:,['ens_gene', 'ext_gene']] #filter to just columns
 gene_mapping = gene_mapping.drop_duplicates()# drop duplicates
 column_cut_off = 'pval'
 cut_off = 0.0001
-
-
 # </editor-fold>
 
 # <editor-fold desc="PART 1: QC">
@@ -101,10 +101,10 @@ print('Total CyCif Antibodies found:',
 
 # WEB LOOKUP for gene ids
 print('[TODO] Add method to find missing CyCif Gene IDs')
-import urllib.request
-url = 'https://biodbnet-abcc.ncifcrf.gov/webServices/rest.php/biodbnetRestApi.xml?method=db2db&format=row&input=genesymbol&inputValues=MYC,MTOR&outputs=geneid&taxonId=9606'
-u = urllib.request.urlopen(url)
-response = u.read()
+#import urllib.request
+#url = 'https://biodbnet-abcc.ncifcrf.gov/webServices/rest.php/biodbnetRestApi.xml?method=db2db&format=row&input=genesymbol&inputValues=MYC,MTOR&outputs=geneid&taxonId=9606'
+#u = urllib.request.urlopen(url)
+#response = u.read()
 
 ##
 
@@ -119,24 +119,17 @@ print('Selecting for RNA-Seq Data with CyCif Antibodies')
 for i in RNA_Seq_Results:
     tmp = pd.read_table(i) #load in RNA-Seq results
     print('')
-    print('RNA-Seq Results for analysis:', i.split('.')[0].split('/')[-1])
+    print('RNA-Seq Results for analysis:', i.split('/')[-1].split('.')[0])
     Sig_RNA_Seq=tmp[tmp[column_cut_off] <= cut_off] # separate results by cut off
-    print('DEG Results:', len(Sig_RNA_Seq.ens_gene.unique()))
-    print('TEG Results:', len(Sig_RNA_Seq))
+    print('Differentially Expressed Genes Results:', len(Sig_RNA_Seq.ens_gene.unique()))
+    print('Differentially Expressed Transcript Results:', len(Sig_RNA_Seq))
     output=pd.merge(Sig_RNA_Seq,df,on='ens_gene') # calculate number of CyCif Antibodies match
     #filter to unique antibody Catalog
     print('Number of matching CyCif Antibodies:',
           ''.join([str(len(output.drop_duplicates(['Cat No']))),'(',str(round(len(output.drop_duplicates(['Cat No']))
                                                   /len(Sig_RNA_Seq.ens_gene.unique()),2)),'%)']))
     #write results
-    output.to_csv(''.join([i.split('.')[0].split('/')[-1],'.RNA_Seq_CyCif_Antibodies.tsv']), sep="\t", index=True)
-
-for i in RNA_Seq_Results:
-    tmp = pd.read_table(i)
-    Sig_RNA_Seq = tmp[tmp[column_cut_off] <= cut_off]  # separate results by cut off
-    print(Sig_RNA_Seq[Sig_RNA_Seq['ext_gene']=='HNF1A '])
-
-
+    output.to_csv(''.join([rna_seq_cycif_output_loc,i.split('/')[-1].split('.')[0],'.RNA_Seq_CyCif_Antibodies.tsv']), sep="\t", index=True)
 # </editor-fold>
 
 # <editor-fold desc="PART 3: Merge RNA-Seq Results Panel">
@@ -144,14 +137,14 @@ for i in RNA_Seq_Results:
 print('')
 print('Merging CyCif Antibodies From RNA-Seq Results')
 
-results = glob.glob("*RNA_Seq_CyCif*.tsv")#read in all CyCif/RNA-Seq files
+results = glob.glob(''.join([rna_seq_cycif_output_loc,'*.RNA_Seq_CyCif_Antibodies.tsv']))#read in all CyCif/RNA-Seq files
 print('Total RNA-Seq Analysis Merging:',len(results))
 output=pd.DataFrame(columns=['ens_gene','ext_gene_x','Cat No','Analysis'])
 
 for i in results: #merge all CyCif Samples
     tmp = pd.read_table(i)  # initialize
     tmp = tmp.loc[:, ['ens_gene', 'ext_gene_x', 'Cat No']].drop_duplicates(['Cat No'])
-    tmp['Analysis'] = i.split('.')[0]
+    tmp['Analysis'] = i.split('/')[-1].split('.')[0]
     output = pd.concat([output, tmp], keys=['ens_gene', 'ext_gene_x'],ignore_index=True)
 print('All DEG RNA-Seq Results with CyCif Antibodies:',len(output))
 output = output.groupby(['ens_gene','ext_gene_x','Cat No'])['Analysis'].apply(','.join).reset_index()
