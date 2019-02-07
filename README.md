@@ -1,39 +1,56 @@
-# CIR:CyCif Antibody Integration With RNA-Seq
+# CIR: CyCif Antibody Integration With RNA-Seq
+Purpose: Identify CyCif Validated Antibodies that match differentially expressed RNA-Seq results
+Version: 0.0.1
 
+To run:  python CyCif-RNA-Seq_0.0.1.py
 
+Current Input Organization:
+ 1) Ensembl Gene/Transcript Mapping
+ 2) Zoltan's list of CyCif Antibodies
+ 3) RNA-Seq Differentially Expressed Results (directory: rna_seq_results)
+ 
+ Output: 
+    - Table summarizing antibodies found and what analysis found
+    - For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated
 
-#Purpose: Identify CyCif Antibodies that work from the differentially expressed RNA-Seq results
-#Version: 0.0.1
-#Input (currently hard coded):
-# 1) Ensembl Gene/Transcript Mapping
-# 2) Zoltan's list of CyCif Antibodies
-# 3) List of RNA-Seq results (by using file format for list of DE genes/transcripts
-#Program Overview:
-# PART 1: QC
-    # 1) QC checks ie search all CyCif Antibodes with Ensembl names to check if possible [TODO: currently filtering CyCif Antibody list by antibody column name, if change will break]
-    # 2) Add Ensemble (ENSG...) unique id for each CyCif Antibody (multiple Ensembl ids for one gene name)
-    # 3) NOT IMPLEMENTED, for gene names not found from CyCif, search for alternative names [TODO]
-        # - use (https://biodbnet-abcc.ncifcrf.gov/db/db2db.php) to select
-        # - alternatively download and make DB of possibles for local run without internet
-# PART 2: RNA-Seq DEG & CyCif Selection
-    # 1) For each file of DEG output, output all CyCif results
-    # 2) NOT IMPLEMENTED: Produce each round of CyCif
-    # 2) NOT IMPLEMENTED: consider any rules needed from Zoltan such as fluorensence or species that can
-# PART 3: Merge CyCif Panel: Assumption is there will be a panel for each DEG list, but one comprehensive list representing all targets of interest
-# 1) Take all results from PART 1 and top X
-# PART 4: Graphical Summary & Output
-# PART 5: Integrate a likelihood metric of RNA & Protein expression correlation ie if DEG will == protein?
-#1) NOT IMPLEMENTED: Use DBs of this information and integrate
+Possible Improvements:
+    - Additional Information To Find missing Gene IDs for CyCif Proteins 
+    - Merge all RNA-Seq results into 1 CyCif Panel (user limit on number of rounds)
+    - Smart CyCif Panel: 
+            Add whether antibodies are better in earlier or later rounds
+            Fluoresce Conflicts
+    - Graphical Output For Results
+    - Smart Way to Determine which RNA correlates with Protein
+    - Transcript specificity for CyCif Antibodies
 
-Does not matter how Zoltan organizes data
-Searches for gene name matches:
+# Programming Rationale
+ PART 1: QC
+    -  QC checks ie search all CyCif Antibodes with Ensembl names to check if possible 
+    -  Method is independent of how Zoltan organizes Antibody Table
+    -  Matches Gene Name to provide a match for each CyCif Antibody Catalog Number
+    -  Prints out statistics on how many matches, where found, and what % of CyCif Antibodies were Found
+    -  [TODO] for gene names not found from CyCif, perform web search for alternative names
+    
+ Part 2: RNA-Seq DEG & CyCif Selection
+    - For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
+    - Prints statistics on search
+    
+    Example:
+    
+        RNA-Seq Results for analysis: RCB0_D1vsD8
+        Differentially Expressed Genes Results: 85
+        Differentially Expressed Transcript Results: 98
+        Number of matching CyCif Antibodies: 11(0.13%)
+        
+     - Prints summary across all RNA-Seq Analysis
+     
+        Merging CyCif Antibodies From RNA-Seq Results
+        Total RNA-Seq Analysis Merging: 21
+        All DEG RNA-Seq Results with CyCif Antibodies: 274
+        Combined CyCif RNA-Seq Results: 133
+        
+ PART 3: Merge CyCif Panel
+    - Take all results from Part 2 and merge
+    - 
+ 
 
-Matches
-
-CSF1R  = CSF1R    or   csf1r
-CSF1 != CSF1R
-CSF1 != csf
-
-Spits out information in what column a match was found and how many
-
-Summarizes the number found
