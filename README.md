@@ -9,7 +9,8 @@ To run: python CyCif-RNA-Seq_0.0.1.py
 # Current Input Organization: 
   1) Ensembl Gene/Transcript Mapping ('gt_mapping.feather') 
   2) List of Validated CyCif Antibodies ('Validated_CyCif_Antibodies_2019.01.24-NJ.csv') 
-  3) RNA-Seq Differentially Expressed Results A directory with one or more RNA-Seq Differentially Expressed Results (see rna_seq_results/) 
+  3) RNA-Seq Differentially Expressed Results 
+      - A directory with one or more RNA-Seq Differentially Expressed Results (see rna_seq_results/) 
 
 # Output: 
   1) Table summarizing for each RNA-Seq analysis which antibodies found and what analysis found 
