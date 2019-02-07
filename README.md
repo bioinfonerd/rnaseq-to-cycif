@@ -23,15 +23,15 @@ Possible Improvements:
     - Smart Way to Determine which RNA correlates with Protein
     - Transcript specificity for CyCif Antibodies
 
-# Programming Rationale
- PART 1: QC
+## Programming Rationale
+ ### PART 1: QC
     -  QC checks ie search all CyCif Antibodes with Ensembl names to check if possible 
     -  Method is independent of how Zoltan organizes Antibody Table
     -  Matches Gene Name to provide a match for each CyCif Antibody Catalog Number
     -  Prints out statistics on how many matches, where found, and what % of CyCif Antibodies were Found
     -  [TODO] for gene names not found from CyCif, perform web search for alternative names
     
- Part 2: RNA-Seq DEG & CyCif Selection
+ ### Part 2: RNA-Seq DEG & CyCif Selection
     - For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
     - Prints statistics on search
     
@@ -49,7 +49,7 @@ Possible Improvements:
         All DEG RNA-Seq Results with CyCif Antibodies: 274
         Combined CyCif RNA-Seq Results: 133
         
- PART 3: Merge CyCif Panel
+ ### PART 3: Merge CyCif Panel
     - Take all results from Part 2 and merge
     - Saves file that show gene id, gene short name, cycif antibody, RNA-Seq Supporting Analysis, Number of RNA-Seq analysis supporting observation
  
