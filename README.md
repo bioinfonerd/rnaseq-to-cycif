@@ -16,7 +16,7 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
       - For each individual RNA-Seq analysis, outputs file with cycif antibody found with all information associated
 
 ### Possible Improvements:
-- Additional Information To Find missing Gene IDs for CyCif Proteins 
+- Add method to find missing Gene IDs for CyCif Proteins 
 - Merge all RNA-Seq results into 1 CyCif Panel (user limit on number of rounds)
 - Smart CyCif Panel: 
    - Add whether antibodies are better in earlier or later rounds
