@@ -86,19 +86,27 @@ To run: python CyCif-RNA-Seq_0.0.1.py
 
 ##Part 2: RNA-Seq Differentially Expressed Genes & Transcripts with CyCif Selection
 
-For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
+  - For each file of RNA-Seq Analysis output, save all genes with CyCif results in separate table in folder 'rna_cycif_results'
+  - Prints statistics on search
 
-Prints statistics on search
 
-Individual RNA-Seq Analysis Example:
+    - Individual RNA-Seq Analysis Example:
 
-RNA-Seq Results for analysis: RCB0_D1vsD8 Differentially Expressed Genes Results: 85 Differentially Expressed Transcript Results: 98 Number of matching CyCif Antibodies: 11(0.13%)
-
-Prints summary across all RNA-Seq Analysis
-
-Merging CyCif Antibodies From RNA-Seq Results Total RNA-Seq Analysis Merging: 21 All DEG RNA-Seq Results with CyCif Antibodies: 274 Combined CyCif RNA-Seq Results: 133
+          RNA-Seq Results for analysis: RCB0_D1vsD8 
+          Differentially Expressed Genes Results: 85 
+          Differentially Expressed Transcript Results: 98 
+          Number of matching CyCif Antibodies: 11(0.13%)
 
 ##PART 3: Merge Individual RNA-Seq Seq & CyCif Results
 
-Take all results from Part 2 and merge
-Saves file that show gene id, gene short name, cycif antibody, RNA-Seq Supporting Analysis, Number of RNA-Seq analysis
+  - Take all results from Part 2 and merge
+  - Saves file that show gene id, gene short name, cycif antibody, RNA-Seq Supporting Analysis, Number of RNA-Seq analysis
+  - Prints summary across all RNA-Seq Analysis
+
+          Merging CyCif Antibodies From RNA-Seq Results 
+          Total RNA-Seq Analysis Merging: 21 
+          All DEG RNA-Seq Results with CyCif Antibodies: 274 
+          Combined CyCif RNA-Seq Results: 133
+
+
+
