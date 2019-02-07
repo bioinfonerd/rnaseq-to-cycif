@@ -29,6 +29,7 @@ To run:  python CyCif-RNA-Seq_0.0.1.py
 - Graphical Output For Results
 - Smart Way to Determine which RNA correlates with Protein
 - Transcript specificity for CyCif Antibodies
+- add python environment to improve user use
 
 ## Programming Rationale
  ### PART 1: Quality Control
