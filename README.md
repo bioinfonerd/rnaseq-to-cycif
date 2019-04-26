@@ -33,6 +33,9 @@ To run: python CyCif-RNA-Seq_0.0.1.py
 - Smart Way to Determine which RNA correlates with Protein 
 - Transcript specificity for CyCif Antibodies 
 - add python environment to improve user use Programming Rationale
+- INDRA integration for edge effects(Peter Suggestion)
+- Speak with proteomics about proteomics/RNA integration (Sarah suggestion)
+- Level of antibody valiation for CyCif (Anninna)
 
 ## PART 1: Quality Control
 
