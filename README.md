@@ -39,7 +39,7 @@ The tool priority ranks validated CyCif antibodies based on differential gene ex
 - Speak with proteomics about proteomics/RNA integration (Sarah suggestion)
 - Level of antibody valiation for CyCif (Anninna)
 
-#Future Improvements
+# Future Improvements
 
 This priority list is further refined by 1) including known RNA and protein correlated expressions and 2) utilizing a literature-based network analysis for targets-of-interest that lack an antibody but high RNA-Seq evidence support.
 
