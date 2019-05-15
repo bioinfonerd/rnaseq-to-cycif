@@ -6,6 +6,8 @@ Version: 0.0.1 (Current)
 
 To run: python CyCif-RNA-Seq_0.0.1.py
 
+The tool priority ranks validated CyCif antibodies based on differential gene expression from RNA-Seq.  In brief, the method 1) resolves gene and protein name discrepancies through an integrated (>30) database as quality control, 2) merges a list of validated CyCif Antibodies and RNA-Seq differential gene expression, and 3) priority ranks by the frequency a particular gene appears across all RNA-Seq analysis.  This priority list is further refined by 1) including known RNA and protein correlated expressions and 2) utilizing a literature-based network analysis for targets-of-interest that lack an antibody but high RNA-Seq evidence support. 
+
 # Current Input Organization: 
   1) Ensembl Gene/Transcript Mapping ('gt_mapping.feather') 
   2) List of Validated CyCif Antibodies ('Validated_CyCif_Antibodies_2019.01.24-NJ.csv') 
@@ -33,6 +35,13 @@ To run: python CyCif-RNA-Seq_0.0.1.py
 - Smart Way to Determine which RNA correlates with Protein 
 - Transcript specificity for CyCif Antibodies 
 - add python environment to improve user use Programming Rationale
+- INDRA integration for edge effects(Peter Suggestion)
+- Speak with proteomics about proteomics/RNA integration (Sarah suggestion)
+- Level of antibody valiation for CyCif (Anninna)
+
+# Future Improvements
+
+This priority list is further refined by 1) including known RNA and protein correlated expressions and 2) utilizing a literature-based network analysis for targets-of-interest that lack an antibody but high RNA-Seq evidence support.
 
 ## PART 1: Quality Control
 
